@@ -1,38 +1,364 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+    @font-face {
+        font-family: 'icomoon';
+        src: url('fonts/icomoon.eot?q2s139');
+        src: url('fonts/icomoon.eot?q2s139#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?q2s139') format('truetype'), url('fonts/icomoon.woff?q2s139') format('woff'), url('fonts/icomoon.svg?q2s139#icomoon') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: block;
+    }
+    
+    @font-face {
+        font-family: 'icomoon';
+        src: url('font/icomoon.eot?bxxaij');
+        src: url('font/icomoon.eot?bxxaij#iefix') format('embedded-opentype'), url('font/icomoon.ttf?bxxaij') format('truetype'), url('font/icomoon.woff?bxxaij') format('woff'), url('font/icomoon.svg?bxxaij#icomoon') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: block;
+    }
+    
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+    .navigation__item {
+        background-color: darkgray;
+        padding: 10px;
+        margin-right: 20px;
+        display: flex;
+        list-style-type: none;
+    }
+    
+    .navigation__item li {
+        margin-right: 20px;
+    }
+    
+    .navigation__item li a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+        font-family: 'Open Sans', sans-serif;
+    }
+    
+    h1 {
+        margin: 0;
+        text-align: center;
+    }
+    
+    .main {
+        text-align: center;
+        position: relative;
+        margin: 0 auto;
+        background: #15202b;
+        width: 856px;
+        min-height: 500px;
+        border-radius: 5px;
+        font-family: 'Open Sans', sans-serif;
+        color: #fff;
+        padding: 20px 0px 5px 20px;
+    }
+    
+    .add-post {
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    input {
+        margin-right: 10px;
+        padding: 5px;
+    }
+    
+    .add-post-button {
+        padding: 5px;
+        text-transform: uppercase;
+    }
+    
+    .post-block {
+        width: 50%;
+        margin: 0 auto;
+    }
+    
+    .post {
+        margin: 20px 0;
+        padding: 20px;
+        background-color: #d7d5d5;
+    }
+    
+    .post span {
+        color: red;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    
+    body {
+        background-color: #343c4e;
+    }
+    
+    .container {
+        max-width: 100%;
+    }
+    
+    .contact-book {
+        position: relative;
+        margin: 0 auto;
+        max-width: 400px;
+    }
+    
+    .contact {
+        display: flex;
+        max-width: 400px;
+        height: 70px;
+        margin: 5px 0;
+        padding: 20px;
+        background-color: #d7d5d5;
+        border-radius: 60px;
+    }
+    
+    .contact img {
+        position: relative;
+        max-width: 70px;
+        max-height: 70px;
+        border-radius: 50%;
+        border: 0.5px #000 solid;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        margin-right: 20px;
+    }
+    
+    .contact-info {
+        position: relative;
+        height: 50px;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    
+    .contact-name {
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    .contact-phone {
+        font-size: 14px;
+        color: #303030;
+    }
+    
+    .male:before {
+        position: relative;
+        font-family: 'icomoon';
+        content: "\f222";
+        color: #0019f8;
+    }
+    
+    .none::before {
+        font-family: 'icomoon';
+        content: "\f128";
+    }
+    
+    .female::before {
+        font-family: 'icomoon';
+        content: "\f221";
+        color: #f800d7;
+    }
+    
+    .searchline {
+        position: relative;
+        display: flex;
+        width: 400px;
+        margin: 0 auto;
+    }
+    
+    .search {
+        position: relative;
+        width: 380px;
+        border-top-left-radius: 60px;
+        border-bottom-left-radius: 60px;
+        border-right: none;
+        margin: 0;
+    }
+    
+    .searchline button {
+        margin: 0;
+        background-color: #fff;
+        border-top-right-radius: 60px;
+        border-bottom-right-radius: 60px;
+        cursor: pointer;
+    }
+    
+    .searchline button::before {
+        font-family: 'icomoon';
+        content: "\f002";
+    }
+    
+    .Post {
+        position: relative;
+        margin: 0 auto;
+        background: #15202b;
+        width: 856px;
+        min-height: 500px;
+        border-radius: 5px;
+        font-family: 'Open Sans', sans-serif;
+        color: #fff;
+        display: flex;
+        padding: 20px 0px 5px 20px;
+    }
+    
+    .avatar {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background: #292929;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        margin-right: 50px;
+        border: 2px solid #8798a5;
+    }
+    
+    .avatar img {
+        max-height: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        border-radius: 50px;
+    }
+    
+    .content {
+        position: relative;
+        display: block;
+        top: 20px;
+        max-width: 80%;
+    }
+    
+    .head {
+        position: relative;
+        align-items: center;
+    }
+    
+    .post_colum_1 {
+        display: flex;
+        height: 30px;
+        margin-bottom: 10px;
+    }
+    
+    .name {
+        position: relative;
+        font-size: 20px;
+        font-weight: 600;
+        align-self: flex-end;
+        margin-right: 5px;
+    }
+    
+    .nickname {
+        color: #8798a5;
+        align-self: flex-end;
+        margin-right: 5px;
+    }
+    
+    .today_date {
+        color: #8798a5;
+        align-self: flex-end;
+        margin-right: 5px;
+    }
+    
+    .today_date::before {
+        content: "\00B7";
+        margin-right: 5px;
+    }
+    
+    .arrow {
+        position: relative;
+        margin-left: auto;
+    }
+    
+    .post_text {
+        position: relative;
+        max-height: 150px;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        display: block;
+        display: -webkit-box;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        margin-bottom: 20px;
+    }
+    
+    .content_img {
+        position: relative;
+        min-width: 650px;
+        height: 310px;
+        background: #292929;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        text-align: -webkit-center;
+        border: 2px solid #8798a5;
+    }
+    
+    .content_img img {
+        margin: 0 auto;
+        height: 100%;
+        width: 100%;
+        border-radius: 20px;
+    }
+    
+    .post_stats {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 30px;
+        width: 75%;
+    }
+    
+    .comment_stats::before {
+        font-family: 'icomoon';
+        content: "\f0e5";
+        margin-right: 5px;
+    }
+    
+    .shares_stats::before {
+        font-family: 'icomoon';
+        content: "\ea2d";
+        margin-right: 5px;
+    }
+    
+    .likes_stats::before {
+        font-family: 'icomoon';
+        content: "\f08a";
+        margin-right: 5px;
+    }
+    
+    .share::before {
+        font-family: 'icomoon';
+        content: "\ea7d";
+        margin-right: 5px;
+    }
+    
+    .Post__images {
+        position: relative;
+        margin: 0 auto;
+        background: #15202b;
+        width: 856px;
+        min-height: 500px;
+        border-radius: 5px;
+    }
+    
+    .images__plate {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    
+    .image {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+        border: 1px solid #fff;
+    }
+    
+    .image img {
+        position: relative;
+        width: 100%;
+        object-fit: cover;
+    }

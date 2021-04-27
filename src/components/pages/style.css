@@ -1,0 +1,157 @@
+.test {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+nav {
+    background-color: darkgray;
+    padding: 10px 0;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+}
+
+.add-post {
+    margin-top: 20px;
+    text-align: center;
+}
+
+input {
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.add-post-button {
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+.post-block {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.post {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #d7d5d5;
+}
+
+.post span {
+    color: red;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+body {
+    background: rgb(77, 83, 76);
+}
+
+.container {
+    max-width: 100%;
+}
+
+.contact-book {
+    position: relative;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.contact {
+    display: flex;
+    max-width: 400px;
+    height: 70px;
+    margin: 5px 0;
+    padding: 20px;
+    background-color: #d7d5d5;
+    border-radius: 60px;
+}
+
+.contact img {
+    position: relative;
+    max-width: 70px;
+    max-height: 70px;
+    border-radius: 50%;
+    border: 0.5px #000 solid;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-right: 20px;
+}
+
+.contact-info {
+    position: relative;
+    height: 50px;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.contact-name {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contact-phone {
+    font-size: 14px;
+    color: #303030;
+}
+
+.male:before {
+    position: relative;
+    font-family: 'icomoon';
+    content: "\f222";
+    color: #0019f8;
+}
+
+.none::before {
+    font-family: 'icomoon';
+    content: "\f128";
+}
+
+.female::before {
+    font-family: 'icomoon';
+    content: "\f221";
+    color: #f800d7;
+}
+
+.searchline {
+    position: relative;
+    display: flex;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.search {
+    position: relative;
+    width: 380px;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-right: none;
+    margin: 0;
+}
+
+.searchline button {
+    margin: 0;
+    background-color: #fff;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    cursor: pointer;
+}
+
+.searchline button::before {
+    font-family: 'icomoon';
+    content: "\f002";
+}
